@@ -1,0 +1,22 @@
+@use "./fonts";
+@use "./resets";
+@use "./variables";
+@use "./navMenu";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  max-width: var(--max-content-width);
+  margin: auto;
+}
+
+.horizontal-space-filler {
+  width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
