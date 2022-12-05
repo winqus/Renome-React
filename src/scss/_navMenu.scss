@@ -18,7 +18,7 @@ header {
   &__header {
     display: flex;
     min-height: $nav-menu-height;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -62,6 +62,12 @@ header {
       left: 0;
       top: $nav-menu-height;
     }
+  }
+
+  &__icon-group {
+    display: flex;
+    justify-content: center;
+    align-content: center
   }
 
   &__item {
