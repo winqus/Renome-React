@@ -21,7 +21,11 @@ function App() {
         subtitle={data.gallery.subtitle}
         images={data.gallery.images}
       />
-      <Footer header="FOLLOW US:" companyTitle="Renome" copyrightText="COPYRIGHT 2022 RENOME BY ESTETIQ" />
+      <Footer
+        header={data.footer.header}
+        companyTitle={data.footer.companyTitle}
+        copyrightText={data.footer.copyrightText}
+      />
     </>
   );
 }

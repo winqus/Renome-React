@@ -33,5 +33,10 @@
             "alt": "Todays specials menu"
           }
         ]
-      }
+      },
+    "footer": {
+      "header": "FOLLOW US:",
+      "companyTitle": "Renome",
+      "copyrightText": "COPYRIGHT 2022 RENOME BY ESTETIQ"
+    }
   }
