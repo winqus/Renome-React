@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function About({ title, subtitle, children }) {
+function About({ title, subtitle, text }) {
   return (
     <section className="about">
       <div className="about__image-container">
@@ -8,9 +8,9 @@ function About({ title, subtitle, children }) {
         <img src={`${process.env.PUBLIC_URL}/img/about_img_2.png`} alt="Building seen through tree leaves" className="about__image about__image--left about__image--on-top" loading="lazy" />
       </div>
       <h1 className="about__title">{title}</h1>
-      <h2 className="about__title about__subtitle">{subtitle}</h2>
+      <h2 className="about__subtitle">{subtitle}</h2>
       <p className="about__text">
-        {children}
+        {text}
       </p>
     </section>
   );
@@ -19,7 +19,7 @@ function About({ title, subtitle, children }) {
 About.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default About;
