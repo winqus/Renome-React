@@ -9,8 +9,8 @@ import data from './pageData.json';
 function App() {
   return (
     <>
-      <Navbar title="Renome" />
-      <Carousel />
+      <Navbar title={data.navbar.title} />
+      <Carousel slidesData={data.carousel.slides} />
       <About
         title={data.about.title}
         subtitle={data.about.subtitle}

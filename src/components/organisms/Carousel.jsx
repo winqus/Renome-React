@@ -1,9 +1,11 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 import { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import CarouselButtons from '../molecules/CarouselButtons';
 import CarouselSlide from '../molecules/CarouselSlide';
 
-function Carousel() {
+function Carousel({ slidesData }) {
   const [slidePositionIndex, setSlidePositionIndex] = useState(0);
   const [carouselSlidable, setCarouselSlidable] = useState(true);
   const [animated, setAnimated] = useState(true);
@@ -92,28 +94,16 @@ function Carousel() {
           className={`carousel__slide-track ${(animated ? 'carousel__slide-track--sliding' : '')}`}
           style={{ transform: `translateX(${trackTranslate})` }}
         >
-          <CarouselSlide
-            key={0}
-            title="made with love"
-            subtitle="for you"
-            imageSrc={`${process.env.PUBLIC_URL}/img/carousel_img_1.png`}
-            altText="eggs and chicken"
-            imageRef={imgRef}
-          />
-          <CarouselSlide
-            key={1}
-            title="made with hate"
-            subtitle="for myself"
-            imageSrc={`${process.env.PUBLIC_URL}/img/carousel_img_2.png`}
-            altText="something more"
-          />
-          <CarouselSlide
-            key={2}
-            title="oranges and laptops"
-            subtitle="for everyone"
-            imageSrc={`${process.env.PUBLIC_URL}/img/carousel_img_3.png`}
-            altText="oranges and laptops"
-          />
+          {slidesData.map((slide, index) => (
+            <CarouselSlide
+              key={index}
+              title={slide.title}
+              subtitle={slide.subtitle}
+              altText={slide.alt}
+              imageSrc={slide.path}
+              imageRef={index === 0 ? imgRef : null}
+            />
+          ))}
         </ul>
       </div>
 
@@ -124,5 +114,14 @@ function Carousel() {
     </section>
   );
 }
+
+Carousel.propTypes = {
+  slidesData: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
+  })).isRequired,
+};
 
 export default Carousel;

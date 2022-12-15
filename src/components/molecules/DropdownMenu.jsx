@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import DropdownItem from '../atoms/DropdownItem';
 import DropdownSearchItem from './DropdownSearchItem';
 import DropdownSubnavItem from './DropdownSubnavItem';
-import ArrowLeftFeaturesIcon from '../atoms/ArrowLeftFeaturesIcon';
-import ArrowRightFeaturesIcon from '../atoms/ArrowRightFeaturesIcon';
+import { arrowLeftFeaturesIcon, arrowRightFeaturesIcon } from '../atoms/Icons';
 
 function DropdownMenu({ open, activeMenu, onChangeMenu }) {
   return (
@@ -15,12 +14,12 @@ function DropdownMenu({ open, activeMenu, onChangeMenu }) {
         <DropdownItem href="#menu" text="MENU" />
         <DropdownItem href="#reservations" text="RESERVATIONS" />
         <DropdownItem href="#blog" text="BLOG" />
-        <DropdownSubnavItem href="#features" text="FEATURES" onClick={() => onChangeMenu('features')} icon={ArrowRightFeaturesIcon} />
+        <DropdownSubnavItem href="#features" text="FEATURES" onClick={() => onChangeMenu('features')} icon={arrowRightFeaturesIcon} />
         <DropdownItem href="#shop" text="SHOP" />
         <DropdownItem href="#contact" text="CONTACT" />
       </ul>
       <ul className={`nav-menu__list nav-menu__list--${open && activeMenu === 'features' ? 'show' : 'hide'}-horizontal`}>
-        <DropdownSubnavItem href="/#" text="BACK" onClick={() => onChangeMenu('main')} icon={ArrowLeftFeaturesIcon} iconOnLeft />
+        <DropdownSubnavItem href="/#" text="BACK" onClick={() => onChangeMenu('main')} icon={arrowLeftFeaturesIcon} iconOnLeft />
         <DropdownItem href="#onepage" text="One page" />
         <DropdownItem href="#portfolio" text="Portfolio" />
         <DropdownItem href="#shortcodes" text="Shortcodes" />
