@@ -10,7 +10,7 @@ function Footer({ header, companyTitle, copyrightText }) {
         <a href="#twitter" className="footer__icon">{twitterIcon}</a>
         <a href="#gplus" className="footer__icon">{googlePlusIcon}</a>
       </div>
-      <a href="/#" className="footer__company-title">{companyTitle}</a>
+      <a href="./#" className="footer__company-title">{companyTitle}</a>
       <h2 className="footer__copyright-text">{copyrightText}</h2>
     </footer>
   );
