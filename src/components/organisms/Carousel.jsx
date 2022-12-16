@@ -78,7 +78,6 @@ function Carousel({ slidesData }) {
       instantMoveToSlide(slides[getNonNegativeArrayIndex(slidePositionIndex, slides.length)]);
     };
     imgRef.current.addEventListener('load', handleResize);
-    // imgRef.current.addEventListener('onloadeddata', () => { console.log('image load'); });
     window.addEventListener('resize', handleResize);
     window.addEventListener('load', handleResize);
 
