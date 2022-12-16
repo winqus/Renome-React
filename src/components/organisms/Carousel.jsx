@@ -58,6 +58,13 @@ function Carousel({ slidesData }) {
     await startCarouselTimeout(400);
   };
 
+  const handleResize = () => {
+    const slides = trackRef.current.children;
+    setCarouselHeight(`${imgRef.current.height}px`);
+    positionSlides();
+    instantMoveToSlide(slides[getNonNegativeArrayIndex(slidePositionIndex, slides.length)]);
+  };
+
   useEffect(() => {
     const slides = trackRef.current.children;
 
@@ -71,12 +78,6 @@ function Carousel({ slidesData }) {
   }, [slidePositionIndex, carouselHeight]);
 
   useEffect(() => {
-    const handleResize = (event) => {
-      const slides = trackRef.current.children;
-      setCarouselHeight(`${imgRef.current.height}px`);
-      positionSlides();
-      instantMoveToSlide(slides[getNonNegativeArrayIndex(slidePositionIndex, slides.length)]);
-    };
     imgRef.current.addEventListener('load', handleResize);
     window.addEventListener('resize', handleResize);
     window.addEventListener('load', handleResize);
@@ -89,7 +90,7 @@ function Carousel({ slidesData }) {
   }, [imgRef, carouselHeight, slidePositionIndex]);
 
   useEffect(() => {
-    setCarouselHeight(`${imgRef.current.height}px`);
+    handleResize();
   }, [imgRef.current?.height]);
 
   return (
