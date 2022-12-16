@@ -88,6 +88,10 @@ function Carousel({ slidesData }) {
     };
   }, [imgRef, carouselHeight, slidePositionIndex]);
 
+  useEffect(() => {
+    setCarouselHeight(`${imgRef.current.height}px`);
+  }, [imgRef.current?.height]);
+
   return (
     <section className="carousel" style={{ height: carouselHeight }}>
       <div className="carousel__slide-track-container">
