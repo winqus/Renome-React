@@ -79,10 +79,12 @@ function Carousel({ slidesData }) {
     };
     imgRef.current.addEventListener('load', handleResize);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
 
     return () => {
-      document.removeEventListener('resize', handleResize);
       imgRef.current.removeEventListener('load', handleResize);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handleResize);
     };
   }, [imgRef, carouselHeight, slidePositionIndex]);
 
