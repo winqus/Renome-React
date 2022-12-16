@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'RenomeIcons';
-  src:  url('../fonts/RenomeIcons.eot?nwj4wa');
-  src:  url('../fonts/RenomeIcons.eot?nwj4wa#iefix') format('embedded-opentype'),
-    url('../fonts/RenomeIcons.ttf?nwj4wa') format('truetype'),
-    url('../fonts/RenomeIcons.woff?nwj4wa') format('woff'),
-    url('../fonts/RenomeIcons.svg?nwj4wa#RenomeIcons') format('svg');
+  src:  url('./fonts/RenomeIcons.eot?nwj4wa');
+  src:  url('./fonts/RenomeIcons.eot?nwj4wa#iefix') format('embedded-opentype'),
+    url('./fonts/RenomeIcons.ttf?nwj4wa') format('truetype'),
+    url('./fonts/RenomeIcons.woff?nwj4wa') format('woff'),
+    url('./fonts/RenomeIcons.svg?nwj4wa#RenomeIcons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

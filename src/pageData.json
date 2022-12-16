@@ -8,19 +8,19 @@
           "title": "made with love",
           "subtitle": "for you",
           "alt": "eggs and chicken",
-          "path": "/img/carousel_img_1.png"
+          "path": "./img/carousel_img_1.png"
         },
         {
           "title": "made with hate",
           "subtitle": "for myself",
           "alt": "something more",
-          "path": "/img/carousel_img_2.png"
+          "path": "./img/carousel_img_2.png"
         },
         {
           "title": "oranges and laptops",
           "subtitle": "for everyone",
           "alt": "oranges and laptops",
-          "path": "/img/carousel_img_3.png"
+          "path": "./img/carousel_img_3.png"
         }
       ]
     },
@@ -34,27 +34,27 @@
         "subtitle": "MORE ABOUT US VIA PHOTOS",
         "images": [
           {
-            "path": "/img/gallery_img_1.png",
+            "path": "./img/gallery_img_1.png",
             "alt": "Caffe bar"
           },
           {
-            "path": "/img/gallery_img_3.png",
+            "path": "./img/gallery_img_3.png",
             "alt": "Tables inside caffe bar"
           },
           {
-            "path": "/img/gallery_img_2.png",
+            "path": "./img/gallery_img_2.png",
             "alt": "Old building basking in sunlight"
           },
           {
-            "path": "/img/gallery_img_6.png",
+            "path": "./img/gallery_img_6.png",
             "alt": "Buttermilk donuts"
           },
           {
-            "path": "/img/gallery_img_5.png",
+            "path": "./img/gallery_img_5.png",
             "alt": "Salad in a bowl"
           },
           {
-            "path": "/img/gallery_img_4.png",
+            "path": "./img/gallery_img_4.png",
             "alt": "Todays specials menu"
           }
         ]
