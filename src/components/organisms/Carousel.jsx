@@ -78,6 +78,7 @@ function Carousel({ slidesData }) {
       instantMoveToSlide(slides[getNonNegativeArrayIndex(slidePositionIndex, slides.length)]);
     };
     imgRef.current.addEventListener('load', handleResize);
+    // imgRef.current.addEventListener('onloadeddata', () => { console.log('image load'); });
     window.addEventListener('resize', handleResize);
     window.addEventListener('load', handleResize);
 
@@ -87,6 +88,10 @@ function Carousel({ slidesData }) {
       window.removeEventListener('load', handleResize);
     };
   }, [imgRef, carouselHeight, slidePositionIndex]);
+
+  useEffect(() => {
+    setCarouselHeight(`${imgRef.current.height}px`);
+  }, [imgRef.current?.height]);
 
   return (
     <section className="carousel" style={{ height: carouselHeight }}>
