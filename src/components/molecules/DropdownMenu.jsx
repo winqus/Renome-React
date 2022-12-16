@@ -19,7 +19,7 @@ function DropdownMenu({ open, activeMenu, onChangeMenu }) {
         <DropdownItem href="#contact" text="CONTACT" />
       </ul>
       <ul className={`nav-menu__list nav-menu__list--${open && activeMenu === 'features' ? 'show' : 'hide'}-horizontal`}>
-        <DropdownSubnavItem href="/#" text="BACK" onClick={() => onChangeMenu('main')} icon={arrowLeftFeaturesIcon} iconOnLeft />
+        <DropdownSubnavItem href="./#" text="BACK" onClick={() => onChangeMenu('main')} icon={arrowLeftFeaturesIcon} iconOnLeft />
         <DropdownItem href="#onepage" text="One page" />
         <DropdownItem href="#portfolio" text="Portfolio" />
         <DropdownItem href="#shortcodes" text="Shortcodes" />
