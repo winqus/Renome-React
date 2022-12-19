@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from 'prop-types';
 
 function DropdownSubnavItem({
   href, text, icon, iconOnLeft, onClick,
 }) {
   return (
-    <div role="button" onClick={onClick} onKeyPress={() => {}} tabIndex="0" id="featuresBtn" className="nav-menu__item">
+    <div role="button" onClick={onClick} tabIndex="0" className="nav-menu__item">
       {!iconOnLeft && (<a href={href}>{text}</a>)}
       <button type="button" className="nav-menu__button" aria-label="OpenNav">
         {icon}
