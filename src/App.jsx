@@ -9,12 +9,17 @@ import data from './pageData.json';
 function App() {
   return (
     <>
-      <Navbar title={data.navbar.title} />
+      <Navbar
+        title={data.navbar.title}
+        cartCount={data.navbar.cartCount}
+        cartValue={data.navbar.cartValue}
+      />
       <Carousel slidesData={data.carousel.slides} />
       <About
         title={data.about.title}
         subtitle={data.about.subtitle}
         text={data.about.text}
+        images={data.about.images}
       />
       <Gallery
         title={data.gallery.title}
