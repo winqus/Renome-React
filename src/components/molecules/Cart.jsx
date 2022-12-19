@@ -25,7 +25,7 @@ function Cart({ count, value, icon }) {
         {icon}
         <div className="nav-menu__btnText">{count}</div>
       </NavButton>
-      <ul id="cartDropdown" className={`nav-menu__cart-dropdown-content ${isClicked && 'nav-menu__cart-dropdown-content--show'}`}>
+      <ul className={`nav-menu__cart-dropdown-content ${isClicked ? 'nav-menu__cart-dropdown-content--show' : ''}`}>
         <li className="nav-menu__cart-dropdown-item nav-menu__cart-dropdown-item--non-selectable">{value}</li>
         <CartItem href="#cart" text="View Cart" />
         <CartItem href="#checkout" text="Checkout" />
