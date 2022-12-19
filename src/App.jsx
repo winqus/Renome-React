@@ -15,6 +15,7 @@ function App() {
         title={data.about.title}
         subtitle={data.about.subtitle}
         text={data.about.text}
+        images={data.about.images}
       />
       <Gallery
         title={data.gallery.title}
