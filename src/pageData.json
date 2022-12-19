@@ -1,6 +1,8 @@
 {
     "navbar": {
-      "title": "Renome"
+      "title": "Renome",
+      "cartCount": 2,
+      "cartValue": "$44.50"
     },
     "carousel": {
       "slides": [

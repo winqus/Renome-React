@@ -4,12 +4,12 @@ import { navCartIcon } from '../atoms/Icons';
 import VerticalLine from '../atoms/VerticalLine';
 import HamburgerDropdown from './HamburgerDropdown';
 
-function Navbar({ title }) {
+function Navbar({ title, cartCount, cartValue }) {
   return (
     <header className="nav-menu nav-menu__header">
       <a href="./" className="nav-menu__title">{title}</a>
       <div className="nav-menu__icon-group">
-        <Cart count={2} value="$44.50" icon={navCartIcon} />
+        <Cart count={cartCount} value={cartValue} icon={navCartIcon} />
         <VerticalLine />
         <HamburgerDropdown />
       </div>
@@ -17,8 +17,15 @@ function Navbar({ title }) {
   );
 }
 
+Navbar.defaultProps = {
+  cartCount: 0,
+  cartValue: '$0.00',
+};
+
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
+  cartCount: PropTypes.number,
+  cartValue: PropTypes.string,
 };
 
 export default Navbar;
